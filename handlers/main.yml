@@ -1,0 +1,13 @@
+---
+- name: Reload Service | monit
+  command: monit reload
+  tags:
+    - using-monit
+
+- name: Reload Service | influxdb	
+  monit:
+    state: restarted
+    name: influxdb
+  tags:
+    - using-monit
+    - disruptive

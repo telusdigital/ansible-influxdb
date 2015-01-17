@@ -1,0 +1,9 @@
+---
+dependencies:
+  - role: meta/repository
+    repository_url: 'wget http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb'
+  - role: meta/monitor
+    monitor_name: influxdb
+    monitor_pidfile: "{{ influxdb_pidfile_path }}"
+    monitor_user: "{{ influxdb_user }}"
+    when: influxdb_server

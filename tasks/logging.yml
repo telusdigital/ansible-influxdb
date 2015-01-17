@@ -1,0 +1,37 @@
+- name: "Directory Exists | {{ mongodb_log_root }}"
+  file:
+    state: directory
+    path: "{{ mongodb_log_root }}"
+    owner: "{{ mongodb_user }}"
+    group: wcdevelop
+    mode: 0775
+  tags:
+    - directory-structure
+    - logging
+    - mongodb
+
+- name: Configure | MongoDB | logpath 
+  lineinfile:
+    state: present
+    dest: /etc/mongod.conf
+    regexp: '^#* *logpath ?\='
+    line: "logpath = {{ mongodb_log_path }}"
+  notify: Reload Service | mongodb
+  tags:
+    - configuration
+    - precise-configuration
+    - logging
+    - mongodb
+
+- name: Configure | MongoDB | logappend
+  lineinfile:
+    state: present
+    dest: /etc/mongod.conf
+    regexp: '^#* *logappend ?\='
+    line: 'logappend = true'
+  notify: Reload Service | mongodb
+  tags:
+    - configuration
+    - precise-configuration
+    - logging
+    - mongodb

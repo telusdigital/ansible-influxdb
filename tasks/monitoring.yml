@@ -1,0 +1,14 @@
+---
+- name: Configure | InfluxDB | pidfilepath
+  lineinfile:
+    state: present
+    dest: /etc/mongod.conf
+    regexp: '^#* *pidfilepath ?\='
+    line: "pidfilepath = {{ mongodb_pidfile_path }}"
+  notify: Reload Service | influxdb
+  tags:
+    - configuration
+    - precise-configuration
+    - pidfile
+    - monitoring
+    - using-monit
