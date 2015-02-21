@@ -1,0 +1,7 @@
+---
+- name: Reload Service | influxdb
+  service:
+    state: reloaded
+    name: influxdb
+  tags:
+    - disruptive
