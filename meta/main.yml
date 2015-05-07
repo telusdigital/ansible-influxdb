@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: "Kinnan Kwok"
+  company: "TELUS digital"
+  description: "An open-source, distributed, time series database with no external dependencies."
+  license: MIT
+  platforms:
+    - name: Ubuntu
+      versions:
+      - trusty
+  categories:
+    - monitoring
