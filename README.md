@@ -16,7 +16,7 @@ Example Playbook
 ----------------
     - hosts: servers
       roles:
-         - role: colstrom.influxdb
+         - role: telusdigital.influxdb
 
 License
 -------
