@@ -1,4 +1,6 @@
 ---
+#influxdb_version:
+
 influxdb_user:
 influxdb_group:
 
