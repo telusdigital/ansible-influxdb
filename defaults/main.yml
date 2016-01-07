@@ -1,0 +1,4 @@
+---
+influxdb_server: no
+
+influxdb_runtime_root: "{{ runtime_root | default('/var/run') }}/influxdb"

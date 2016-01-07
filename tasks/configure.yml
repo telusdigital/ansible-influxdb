@@ -1,0 +1,6 @@
+---
+- name: "Directory Exists | {{ influxdb_runtime_root }} "
+  file:
+    state: directory
+    path: "{{ influxdb_runtime_root }}"
+

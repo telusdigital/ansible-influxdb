@@ -9,4 +9,5 @@ galaxy_info:
       versions:
         - trusty
   categories:
+    - database:influxdb
     - monitoring
