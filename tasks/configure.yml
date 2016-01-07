@@ -3,4 +3,9 @@
   file:
     state: directory
     path: "{{ influxdb_runtime_root }}"
-
+    owner: "{{ infludxb_user }}"
+    group: "{{ influxdb_group }}"
+    mode: 0775
+  tags:
+    - directory-structure
+    - runtime-data

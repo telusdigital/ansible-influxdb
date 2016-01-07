@@ -1,4 +1,7 @@
 ---
+influxdb_user:
+influxdb_group:
+
 influxdb_server: no
 
-influxdb_runtime_root: "{{ runtime_root | default('/var/run') }}/influxdb"
+influxdb_runtime_root: "{{ runtime_root | default('/var/run') }}/nosql"
