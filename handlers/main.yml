@@ -12,3 +12,10 @@
     name: nosql
   tags:
     - disruptive
+
+- name: service | influxdb | stopped
+  service:
+    state: stopped
+    name: nosql
+  tags:
+    - disruptive

@@ -6,6 +6,7 @@
     owner: "{{ infludxb_user }}"
     group: "{{ influxdb_group }}"
     mode: 0775
+    notify: service | influxdb | stopped
   tags:
     - directory-structure
     - runtime-data
