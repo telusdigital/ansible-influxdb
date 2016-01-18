@@ -6,13 +6,6 @@
   tags:
     - disruptive
 
-- name: service | influxdb | started
-  service:
-    state: started
-    name: nosql
-  tags:
-    - disruptive
-
 - name: service | influxdb | stopped
   service:
     state: stopped

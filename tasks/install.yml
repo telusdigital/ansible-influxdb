@@ -1,18 +1,21 @@
 ---
+- name: Influxdb Exists
+  command: dpkg -s influxdb
+  register: dpkg
+
 - name: Fetch package
   get_url:
     url: 'http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb'
     dest: '/tmp/influxdb_latest_amd64.deb'
-  when: influxdb_server
+  when: dpkg.rc == 0
 
 - name: Install package
   command: dpkg -i /tmp/influxdb_latest_amd64.deb
-  when: influxdb_server
-  notify: service | influxdb | started
   tags:
     - software-installation
     - influxdb
-# - name: Run influxdb
-#   service:
-#     name: influxdb
-#     state: started
+
+- name: Run influxdb
+  service:
+    name: influxdb
+    state: started
