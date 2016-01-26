@@ -1,0 +1,10 @@
+---
+rvm: 2.2
+sudo: required
+services: docker
+
+install:
+  - bundle install
+
+script:
+  - kitchen test
