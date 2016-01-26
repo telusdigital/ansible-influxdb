@@ -17,5 +17,4 @@ describe 'ansible-$package::default' do
   describe ppa('brightbox/ruby-ng') do
     it { should exsist }
   end
-
 end
