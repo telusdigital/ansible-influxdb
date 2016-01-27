@@ -1,7 +1,14 @@
 ---
-- name: Reload Service | influxdb
+- name: service | influxdb | reloaded
   service:
     state: reloaded
+    name: influxdb
+  tags:
+    - disruptive
+
+- name: service | influxdb | stopped
+  service:
+    state: stopped
     name: influxdb
   tags:
     - disruptive
