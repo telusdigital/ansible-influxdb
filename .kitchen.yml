@@ -4,7 +4,7 @@ driver:
   privileged: true
 
 provisioner:
-  name: ansible_playbook
+  name: default.yml
   hosts: test-kitchen
   requirements_path: requirements.yml
 
