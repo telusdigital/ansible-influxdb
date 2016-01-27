@@ -2,13 +2,13 @@
 - name: service | influxdb | reloaded
   service:
     state: reloaded
-    name: nosql
+    name: influxdb
   tags:
     - disruptive
 
 - name: service | influxdb | stopped
   service:
     state: stopped
-    name: nosql
+    name: influxdb
   tags:
     - disruptive
