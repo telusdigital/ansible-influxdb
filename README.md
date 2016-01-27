@@ -7,6 +7,7 @@
 Tunables
 --------
 * influxdb_version: 0.9.6.1
+* influxdb_runtime_root: "{{ runtime_root | default('/var/run') }}/influxdb"
 
 Dependencies
 ------------
