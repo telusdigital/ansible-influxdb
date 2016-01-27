@@ -1,20 +1,13 @@
 require 'spec_helper'
 
-describe 'ansible-$package::default' do
+describe 'ansible-influxdb::default' do
 
-  describe package('ruby2.2')do
-    it { should be_installed.by('apt') }
+  describe package('influxdb') do
+    it { should be_installed.with_version('0.9.6.1') }
   end
 
-  describe package('ruby2.2-dev') do
-    it { should be_installed,by('apt') }
+  describe service('influxdb') do
+    it { should be_running }
   end
 
-  describe package('bundler') do
-    it { should be_installed.by('gem') }
-  end
-
-  describe ppa('brightbox/ruby-ng') do
-    it { should exsist }
-  end
 end

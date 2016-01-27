@@ -4,3 +4,7 @@
 
   roles:
     - role: ansible-influxdb
+      system_role: travis
+      project: travis
+      enviroment_tier: travis
+      domain: travis

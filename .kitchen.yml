@@ -4,11 +4,12 @@ driver:
   privileged: true
 
 provisioner:
-  name: default.yml
+  name: ansible_playbook
   hosts: test-kitchen
   requirements_path: requirements.yml
 
 platforms:
   - name: ubuntu-14.04
+
 suites:
   - name: default

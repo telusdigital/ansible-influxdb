@@ -1,10 +1,14 @@
 ---
-rvm: 2.2
 sudo: required
+
 services: docker
 
 install:
-  - bundle install
+- bundle install
 
 script:
-  - kitchen test
+- kitchen test
+
+notifications:
+  slack:
+    secure: hl4vN1BplT4c32hao+2xOGiEbd6EKlWeJeMVEc3U6iBGKUqIJMN1rls9+t9yr5p5r1XLgU2Y1oLkyzI3Uih0ae6OqfPZCgxIttSdZRKXuPw93RQPky41coHbRKqp4vNuTUfxMHXwDjx0P8ubXk54V6w71EiNEdph6cG+dS0KcfgC2C+kyxb6JoARt3vsCNqq328Xc2/93Ho4X5/cZqWQoKgtN0lp3LHUfS/9snzrQVij7/SDFJkbv5xwDqnZSueAZ4vKUYSPZ3j4Q9NE0cYWoGJYt6FpBp8hfXzk/KQHKTyxzo4a3/F3p/PPDsuxJjcfnJONXKYi/lCWOUfyikjbBjOw0iiqOgQae+AAZz+gHAJ8+coMr0mwF7qTmv3/VXpCRPRfKfd533TIujRkZUsGlDBMdGvB/Cdv/+z610LLBlf9h6dzZ7ZZs0GjqzP+I/IWlzCGr0XDyQre87hYEqqrhYj/gwFA8139fbBvCsYy2Q3agy61zxD+YFLCaZQHhzxkj57dkezXZw7uJRfMNpypsOtzwNmn+snc5R1gU00zjBov1uKnI7Jv9s9ZHswMXSmPUWogEYOE0LS3XLjbmY8iovoYE4fBAZX/tqVghK6Gr/oUiQL1C4W/9uz2fSe0U3L536VxJZf1q6r4VofXcKYwWY3X9JTnKHodaFilCx3Ojr0=
